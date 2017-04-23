@@ -14,16 +14,16 @@
 ### Singleton
 
 ```
-class Game {
-    private static instance: Game;
+class SingletonExample {
+    private static instance: SingletonExample;
 
     private constructor() { }
 
     static getInstance() {
-        if (! Game.instance) {
-            Game.instance = new Game();
+        if (! SingletonExample.instance) {
+            SingletonExample.instance = new SingletonExample();
         }
-        return Game.instance;
+        return SingletonExample.instance;
     }
 }
 ```
