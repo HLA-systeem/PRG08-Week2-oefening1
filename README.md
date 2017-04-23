@@ -9,6 +9,9 @@
 - Vraag: Hoe zorg je er voor dat je alleen arguments kan doorgeven die daadwerkelijk een x,y, width en height eigenschap hebben?
 - In de game loop roep je de collision method van Util aan om te zien of de car en de rock elkaar raken.
 
+## Bonus opdracht
+- Nadat je gecrashed bent of een score hebt gehaald, kan je opnieuw beginnen door op een knop te drukken.
+
 ## Voorbeeldcode
 
 ### Singleton
