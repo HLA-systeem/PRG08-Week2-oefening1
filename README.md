@@ -19,7 +19,7 @@ class SingletonExample {
 
     private constructor() { }
 
-    static getInstance() {
+    public static getInstance() {
         if (! SingletonExample.instance) {
             SingletonExample.instance = new SingletonExample();
         }
