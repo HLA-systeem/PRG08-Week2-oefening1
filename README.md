@@ -1,1 +1,45 @@
 # PRG08-Week2-oefening1
+
+## Singleton
+
+- Ga verder met de code van 'Close Call' uit week 1
+- Maak de Game class een singleton.
+- Roep de game instance aan vanuit car en wheel.
+- Maak een Util class met een static method `checkCollision`. Deze method krijgt twee instances binnen als arguments, en kan checken of die elkaar raken. De instances moeten een x,y, width en height eigenschap hebben.
+- Vraag: Hoe zorg je er voor dat je alleen arguments kan doorgeven die daadwerkelijk een x,y, width en height eigenschap hebben?
+- In de game loop roep je de collision method van Util aan om te zien of de car en de rock elkaar raken.
+
+## Voorbeeldcode
+
+### Singleton
+
+```
+class Game {
+    private static instance: Game;
+
+    private constructor() { }
+
+    static getInstance() {
+        if (! Game.instance) {
+            Game.instance = new Game();
+        }
+        return Game.instance;
+    }
+}
+```
+
+### Collision 
+
+Let op dat de instances een x, y, width en height moeten hebben:
+
+```
+let instance1 = new Car();
+let instance2 = new Rock();
+
+if (instance1.x < instance2.x + instance2.width &&
+   instance1.x + instance1.width > instance2.x &&
+   instance1.y < instance2.y + instance2.height &&
+   instance1.height + instance1.y > instance2.y) {
+    // bubble collision detected!
+}
+```
