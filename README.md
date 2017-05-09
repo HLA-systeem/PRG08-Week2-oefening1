@@ -27,6 +27,10 @@ class SingletonExample {
     }
 }
 ```
+### Game instance ophalen via Singleton
+```
+let g : Game = Game.getInstance();
+```
 
 ### Collision 
 
